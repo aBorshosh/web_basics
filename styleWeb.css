@@ -1,0 +1,138 @@
+/* Основні стилі для сторінки */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Контейнер для центрування та стилізації */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки */
+h1, h2 {
+    color: #ff6600; 
+    text-align: center;
+}
+
+/* Основний текст */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Стилі для списку посилань на index.html */
+ul.links {
+    margin: 20px 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+ul.links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+ul.links li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+ul.links li a:hover {
+    text-decoration: underline;
+}
+
+/* Стилі для списку на сторінці про автора (author.html) */
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Стилі для фото автора */
+.author-photo {
+    display: block;
+    width: 300px; 
+    height: auto; 
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для домика та кнопки "на головну" */
+.home-button {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.home-button img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.home-link {
+    margin-left: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ff6600;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
+/* Стилі для підказки при наведенні на домик */
+.tooltip {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.home-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Трикутник під підказкою */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
