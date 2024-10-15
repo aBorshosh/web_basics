@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя перша HTML-форма</title>
+</head>
+<body>
+    <h1>Моя перша HTML-форма</h1>
+    
+    <!-- Форма з методом GET і дією до https://httpbin.org/get -->
+    <form action="https://httpbin.org/get" method="GET">
+      <!-- Форма з методом POST і дією до https://httpbin.org/post -->
+    <!-- <form action="https://httpbin.org/post" method="POST"> -->
+        
+        <!-- Поле для введення імені з використанням тегу <label> та атрибуту for -->
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <!-- Поле для введення дати народження з використанням простого огортання тегу <label> -->
+        <label>Дата народження:
+            <input type="date" name="birthdate">
+        </label><br><br>
+
+        <!-- Поле для введення імейлу з використанням атрибуту for -->
+        <label for="email">Імейл:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <!-- Текстова зона для введення повідомлення -->
+        <label for="message">Повідомлення:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+        <!-- Чекбокси для вибору улюблених напоїв -->
+        <label>Ваші улюблені напої:</label><br>
+        <input type="checkbox" id="coffee" name="drinks" value="Кава">
+        <label for="coffee">Кава</label><br>
+        <input type="checkbox" id="tea" name="drinks" value="Чай">
+        <label for="tea">Чай</label><br>
+        <input type="checkbox" id="juice" name="drinks" value="Сік">
+        <label for="juice">Сік</label><br>
+        <input type="checkbox" id="water" name="drinks" value="Вода">
+        <label for="water">Вода</label><br><br>
+
+        <!-- Радіокнопки для вибору національності -->
+        <label>Моя національність:</label><br>
+        <input type="radio" id="ukrainian" name="nationality" value="Українець">
+        <label for="ukrainian">Українець</label><br>
+        <input type="radio" id="hungarian" name="nationality" value="Угорець">
+        <label for="hungarian">Угорець</label><br>
+        <input type="radio" id="other" name="nationality" value="Інше">
+        <label for="other">Інше</label><br><br>
+
+        <!-- Кнопка для відправки форми -->
+        <input type="submit" value="Надіслати">
+
+        <!-- Кнопка для очищення форми -->
+        <input type="reset" value="Очистити">
+    </form>
+
+    <!-- Додавання зображення за допомогою тега picture -->
+    <picture>
+        <!-- Зображення для мобільних пристроїв (менше 468px) -->
+        <source media="(max-width: 468px)" srcset="https://picsum.photos/300/500">
+        <!-- Зображення для десктопів -->
+        <source media="(min-width: 469px)" srcset="https://picsum.photos/1000/400">
+        <!-- Базове зображення на випадок, якщо media не спрацює -->
+        <img src="https://picsum.photos/1000/400" alt="Демонстраційне зображення">
+    </picture>
+
+</body>
+</html>
